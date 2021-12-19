@@ -2,14 +2,39 @@
 	controllerName="sap.ui.demo.basicTemplate.controller.Home"
 	displayBlock="true"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
+	xmlns:mvc="sap.ui.core.mvc"
+>
 	<Page
 		id="page"
-		title="{i18n>title}">
+		title="{i18n>title}"
+	>
 		<content>
-		<List id="L1" items="{/Employees}" headerText="Demo List">
-		<StandardListItem title="{FirstName}"/>
-		</List>
+			<List
+				id="L1"
+				items="{/Employees}"
+				headerText="Demo List"
+			>
+				<StandardListItem title="{FirstName}"/>
+			</List>
+			<Tree
+				id="Tree"
+				items="{path: 'Tree>/'}"
+				mode="SingleSelectLeft"
+				includeItemInSelection="true"
+			>
+				<headerToolbar>
+					<OverflowToolbar>
+						<content>
+							<Title
+								text="Nodes"
+								level="H2"
+							/>
+							<ToolbarSpacer/>
+						</content>
+					</OverflowToolbar>
+				</headerToolbar>
+				<StandardTreeItem title="{Tree>text}" icon="{Tree>ref}"/>
+			</Tree>
 		</content>
 	</Page>
 </mvc:View>

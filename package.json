@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/arao-myspace/MiddlewareSimpleProxy#readme",
   "dependencies": {
-    "@ui5/cli": "^2.10.3"
+    "@ui5/cli": "^2.14.2"
   },
   "devDependencies": {
     "ui5-middleware-simpleproxy": "^0.7.1"
